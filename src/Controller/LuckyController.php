@@ -18,4 +18,16 @@ class LuckyController
             '<html><body>Lucky number: '.$number.'</body></html>'
         );
     }
+
+    /**
+     * @Route("/lucky/go")
+     */
+    public function go()
+    {
+        $number = random_int(0, 100);
+
+        return new Response(
+            '<html><body>go number: '.$number.'</body></html>'
+        );
+    }
 }
